@@ -14,8 +14,8 @@ class StandardMembership {
 
 class PremiunMembership {
     constructor(name) {
-       this.name = name;
-       this.cost = 150;
+        this.name = name;
+        this.cost = 150;
     }
 }
 
@@ -30,7 +30,7 @@ class MemberFactory {
         const Membership = MemberFactory.list[type] || MemberFactory.list.simple;
         const member = new Membership(name);
         member.type = type;
-        member.define = function() {
+        member.define = function () {
             console.log(`${this.name} (${this.type}): ${this.cost}`);
         };
         return member;
@@ -47,5 +47,5 @@ const members = [
 ];
 
 members.forEach(member => {
-member.define()
+    member.define()
 });
